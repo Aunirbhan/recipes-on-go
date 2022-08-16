@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:#A9CCE3;
+}
+li, a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #283747;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+}
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 50px;
+}
+
+.nav_links li a {
+    transition: all 0.5s ease 0.3s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9
+}
+#mainHeader{
+    text-align: center;
+    font-size: 45px;
+    transition: all 0.5s ease 0.3s;
+    color:#283747;
+}
+h1{
+  font-family: "Montserrat", sans-serif;
+}
+
+.onPage{
+  color: #C39BD3;
+}
+
+.mainContainer{
+  display: flex;
+}
+
+#mainPageImg{
+  width: 50%;
+  justify-content: left;
+  padding: 5%;
+  transition: all 0.2s ease 0.2s;
+}
+
+.textContainer{
+  justify-content: right;
+  padding: 5%;
+  color: #283747;
+  font-family: "Montserrat", sans-serif;
+}
+
+.purposeHeader{
+  font-size:30px;
+}
+
+.purposeParagraph{
+  font-size:18px;
+}
+
+#inputContainer{
+  display:flex;
+  justify-content: center;
+}
+
+#input{
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+#button{
+  width: 10%;
+  font-size: 100%;
+}
