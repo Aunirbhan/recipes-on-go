@@ -5,7 +5,6 @@ let input = document.getElementById("input")
 let button = document.getElementById("button")
 let recipeContainer = document.getElementById("recipeContainer")
 
-// these funtions are style choices to make the main heading on each page stand out through fading on scroll and enlarging on hover
 mainHeader.onmouseover = function(){
     mouseOver();
 }
@@ -43,11 +42,9 @@ function fadeOutOnScroll(element) {
       element.style.opacity = opacity;
     }
   }
-  
 function scrollHandler() {
     fadeOutOnScroll(mainHeaderContainer);
   }
-  
 window.addEventListener('scroll', scrollHandler);
 
 
@@ -58,7 +55,7 @@ input.addEventListener("keypress", function(event){
     }
 });
 
-
+// fetching the food api and displaying the data retreived from it based on the input users provide
 button.onclick = function(event){
   event.preventDefault()
   let input = document.querySelector("input").value
@@ -72,30 +69,45 @@ button.onclick = function(event){
         console.log(item)
         for(let i=0;i<item.length;i++){
           console.log(item[i])
-          let newDiv = document.createElement("div")
+          //a new div for each recipe which will hold the information about the respective recipes
+          let itemDiv = document.createElement("div")
+          itemDiv.setAttribute("id","itemDiv")
+
+          //a new div for the text aspects to separate them from the image
+          let foodTextDiv = document.createElement("div")
+          foodTextDiv.setAttribute("id","foodTextDiv")
+
+          //a new div for the image aspect to separate them from the text
+          let foodImageDiv = document.createElement("div")
+          foodImageDiv.setAttribute("id","foodImageDiv")
 
             //imageSrc
             let foodImage = document.createElement("img")
             foodImage.src = item[i].image;
+            foodImage.setAttribute("id","foodImage")
             
             //title
-            let foodTitle = document.createElement("h3")
+            let foodTitle = document.createElement("h2")
             foodTitle.innerHTML = item[i].title
+            foodTitle.setAttribute("id","foodTitle")
 
-            //cuisine
-            // let  = document.createElement("p")
-            // foodCuisine.innerHTML = item[i].cuisine
+            //instructions
+            let foodLinkContainer = document.createElement("a")
+            foodLinkContainer.innerHTML = ("Recipe and More!")
+            foodLinkContainer.target = "_blank"
+            foodLinkContainer.href = item[i].spoonacularSourceUrl
+            foodLinkContainer.setAttribute("id","foodLinkContainer")
             
             //ready
             let foodReady = document.createElement("p")
             foodReady.innerHTML = "Ready within "+item[i].readyInMinutes+" minutes"
+            foodReady.setAttribute("id","foodReady")
             
             //appending the data 
-            newDiv.append(foodTitle, foodReady, foodImage)
-            console.log(newDiv)
-            console.log(recipeContainer)
-            recipeContainer.append(newDiv)
-            console.log(recipeContainer)
+            foodImageDiv.append(foodImage)
+            foodTextDiv.append(foodTitle, foodReady, foodLinkContainer)
+            itemDiv.append(foodTextDiv,foodImageDiv)
+            recipeContainer.append(itemDiv)
         }
       })
 }

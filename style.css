@@ -1,98 +1,460 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color:#A9CCE3;
-}
-li, a {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    color: #283747;
-    text-decoration: none;
-}
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 10%;
-}
-.nav_links {
-    list-style: none;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:#96c4ff;
 }
 
-.nav_links li{
-    display: inline-block;
-    padding: 0px 50px;
+#logoImage {
+  width: 8%;
+  padding-right: 10px;
+}
+li,a {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 30px;
+  background-color: #96c4ff;
+  opacity: 1.5;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10%;
+  transition: all 0.5 ease 0.3;
+}
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 2px 2px;
 }
 
 .nav_links li a {
-    transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s;
 }
 
 .nav_links li a:hover {
-    color: #0088a9
-}
-#mainHeader{
-    text-align: center;
-    font-size: 45px;
-    transition: all 0.5s ease 0.3s;
-    color:#283747;
-}
-h1{
-  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
-.onPage{
-  color: #C39BD3;
+#mainHeader {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  transition: all 0.5s ease 0.3s;
+  margin-bottom: 0px;
+  font-weight: bold;
 }
 
-.mainContainer{
+h1 {
+  font-family: 'Roboto Slab', serif;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+p {
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Playfair Display", serif;
+}
+
+h3 {
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Playfair Display", serif;
+}
+.onPage {
+  color: #76448a;
+}
+.offPage {
+  color: #283747;
+}
+
+.mainContainer {
   display: flex;
 }
 
-#mainPageImg{
+#mainPageImg {
+  border-radius: 100px;
   width: 50%;
   justify-content: left;
   padding: 5%;
   transition: all 0.2s ease 0.2s;
 }
 
-.textContainer{
+.textContainer {
   justify-content: right;
   padding: 5%;
-  color: #283747;
+  color: black;
   font-family: "Montserrat", sans-serif;
 }
 
-.purposeHeader{
-  font-size:30px;
+#purposeHeader {
+  font-size: 40px;
+  transition: all 0.5s ease 0.3s;
 }
 
-.purposeParagraph{
-  font-size:18px;
+.purposeParagraph {
+  font-size: 18px;
 }
 
-#inputContainer{
-  display:flex;
+#inputContainer {
+  margin-top: 30px;
+  display: flex;
   justify-content: center;
 }
 
-#input{
+#input {
   width: 75%;
   box-sizing: border-box;
-  border: 2px solid #cccccc;
+  border: none;
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
+  background-image: url("searchicon.png");
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
+  margin-right: 10px;
 }
 
-#button{
+#button {
   width: 10%;
   font-size: 100%;
+  background-color: white;
+  color: #283747;
+  border-radius: 10px;
+  background-color: rgb(29, 161, 242);
+  border: none;
+  font-family: Helvetica;
+  transition: all 0.5s ease 0.3s;
 }
+
+#button:hover {
+  background-color: #76448A ;
+}
+
+#button:active {
+  transform: scale(0.90);
+  background-color: #76448A ; 
+}
+
+#button:focus {
+  outline: none;
+}
+
+span {
+  color: rgb(29, 161, 242);
+}
+
+a {
+  border-radius: 0px;
+  position: relative;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+a:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+a:hover {
+  color: #ffffff;
+}
+a:hover:after {
+  width: 100%;
+}
+
+.glow-on-hover {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: #111111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: all 0.5s ease 0.3s;
+  border-radius: 100px;
+}
+.glow-on-hover:active {
+  color: #000;
+}
+.glow-on-hover:active:after {
+  background: transparent;
+}
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+#carouselExampleIndicators{
+  margin: auto;
+  width:600px;
+}
+.carousel-control-prev{
+  background-color:black;
+}
+.carousel-control-next{
+  background-color:black;
+  
+}
+
+
+/* Contact Page*/
+
+.help_text{
+  color: #283747;
+  text-align: center;
+  padding: 30px;
+  font-family: Helvetica;
+}
+
+#help {
+  font-size: 40px;
+}
+
+#help_span{
+ color: rgb(29, 161, 242);
+}
+
+.descriptionParagraph {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: helvetica;
+}
+
+
+.description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+  
+}
+
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left {
+  height: 100%;
+  background : url(https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg4.jpg?v=1660444908573) no-repeat center;
+  background-size: cover;
+}
+
+.right{
+  padding: 25px 40px;
+}
+
+#contact_text {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+
+#contact_text:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: blue;
+}
+
+.field {
+  width: 100%;
+  padding: 0.5rem 1 rem;
+  outline: none;
+  border: 2px solid rgba(0,0,0,0);
+  background-color: rgba(230,230,230,0.6);
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: .3s;
+}
+
+.field:hover{
+  background-color: rgba(0,0,0,0.1);
+  
+}
+
+.field:focus{
+  background-color: #fff;
+  border: 2px solid rgba(30,85,250,0.47);
+}
+
+.area {
+  min-height: 150px;
+}
+
+.button_contact{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: blue;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border : none;
+  color: #fff;
+  transition: .3s;
+  
+}
+
+.button_contact:hover{
+  background-color: red;
+}
+
+/* Recipe Page*/
+#itemDiv{
+  display: flex;
+  justify-content: center;
+}
+
+#foodTextDiv{
+  display: inline-block;
+  margin: 0;
+  padding-left: 10%;
+  padding-top: 3%;
+  width: 50%;
+  text-align: center;
+}
+
+#foodImageDiv{
+  display: inline-block;
+  margin: 0;
+  padding-top: 3%;
+  padding-left: 10%;
+  width: 50%;
+}
+
+#foodTitle{
+  font-size: 30px;
+  color: #283747;
+}
+
+#foodReady{
+  font-size: 20px;
+  color: #283747;
+}
+
+#foodImage{
+  justify-self: right;
+  padding-left: 5px;
+  border-radius: 10%
+}
+
+#foodLinkContainer{
+  font-size: 30px;
+  color: #283747 ;
+  background-color: rgb(29, 161, 242);
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+#foodLinkContainer:hover{
+  background-color: #b374e3;
+}
+
+
+.email{
+  transition: all 0.5 ease 0.3;
+}
+
+.email:link {
+  color: rgb(29, 161, 242);
+}
+
+.email:visited {
+   color: rgb(29, 161, 242);
+}
+
+.email:hover {
+  color: white;
+}
+

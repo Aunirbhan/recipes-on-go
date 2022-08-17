@@ -4,54 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <title>Demoday Project</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-<!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
-
+    <!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
   </head>
   <body>
-<!--     the navigation for the webpage -->
+    <!--     the navigation for the webpage -->
     <header>
-          <nav>
-              <ul class="nav_links">
-                  <li><a href="index.html" class="onPage"> Home </a></li>
-                  <li><a href="recipes.html"> Recipes </a></li>
-<!--                   <li><a href="blog.html"> Experience </a></li> -->
-              </ul>
-          </nav>
+      <img
+        id="logoImage"
+        src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/logo.png?v=1660590191657"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="index.html" class="onPage"> Home </a></li>
+          <li><a href="recipes.html" class="offPage"> Recipes </a></li>
+          <li><a href="contact.html" class="offPage">Contact</a></li>
+          <!--                   <li><a href="blog.html"> Experience </a></li> -->
+        </ul>
+      </nav>
     </header>
-    
-    <div id="mainHeaderContainer">
-    <h1 id="mainHeader">Welcome to Recipemania</h1>
-    </div>
-    
-    <div class="mainContainer">
-    <!-- <img id="mainPageImg" src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg.jpg?v=1660439684273" alt="welcome image"> -->
-    
-    <div class="textContainer">
-      
-    <h3 class="purposeHeader">
-      Our Purpose:
-    </h3>
-    <br><br>
-    <p class="purposeParagraph">
-      Eating is an essential part of all of our lives. We are here to make a fun and enjoyable experience for all!
-    </p>
-       <br>
-    <p class="purposeParagraph">
-      Our extensive, fun-to-make recipes are here to bring you good food and a great experience. 
-    </p>
-      <br>
-    <p class="purposeParagraph">
-      Great for a quick lunch or even a fun activity to share with family before an exquisite dinner! 
-    </p>
-      <br>
-      
-    </div>
-    </div>
-    
-<!--     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
-  </body>
-</html>
 
+    <div id="mainHeaderContainer">
+      <h1 id="mainHeader"><span id="welcome-text">Welcome </span>To RecipesOnGo</h1>
+    </div>
+
+    <div class="mainContainer">
+
+      <div class="textContainer">
+        <h3 id="purposeHeader">Our Purpose:</h3>
+        <br /><br />
+        <p class="purposeParagraph">
+          Cooking is an extremely creative activity. We want to be your guide to
+          creating the best food and beverages possible. We have a large
+          selection of food recipes that accommodate for different diets. We offer 
+          the highest quality recipes that are designed for perfection and incredible taste. 
+          Through our recipes, you can make cooking a highlight of your day.
+        </p>
+        <br />
+      </div>
+    </div>
+       <!-- Carousel --><!-- Users can slide through images and view images-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg.jpg?v=1660439684273" width="600" height= "800">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg2.jpg?v=1660444895387" width="600" height= "800">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg6.jpg?v=1660444918414" width="600" height= "800">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg5.jpg?v=1660444914349" width="600" height= "800">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.glitch.global/d66666c0-bbb7-48c2-ab93-0792d0e918aa/mainPageImg8.jpg?v=1660444927129" width="600" height= "800">
+    </div>
+  </div>
+      
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> 
+
+
+<script src="script.js"></script>
+    <!--Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -  </body>
+</html>
